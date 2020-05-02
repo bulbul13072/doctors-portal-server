@@ -48,21 +48,21 @@ app.post('/setAppointment', function(req, res) {
    });
 });
 
-// app.get('/appointments', function(req, res) {
-//   var uid = "-M64LHvSEaUhiw6hwg";
-// if (uid.length != 18) {
-//   res.json({message: "Error: uid must be 18 characters long."});
-// } else {
-//   usersRef.once("value", function(snapshot) {
-//     //console.log(snapshot);
-//     if (snapshot.val() == null) {
-//       res.json({message: "Error: No user found", "result": false});
-//     } else {
-//       res.json({"message":"successfully fetch data", "result": true, "data": snapshot.val()});
-//     }
-//   });
-// }
-// });
+app.get('/appointments', function(req, res) {
+  var uid = "-M64LHvSEaUhiw6hwg";
+if (uid.length != 18) {
+  res.json({message: "Error: uid must be 18 characters long."});
+} else {
+  usersRef.once("value", function(snapshot) {
+    //console.log(snapshot);
+    if (snapshot.val() == null) {
+      res.json({message: "Error: No user found", "result": false});
+    } else {
+      res.json({"message":"successfully fetch data", "result": true, "data": snapshot.val()});
+    }
+  });
+}
+});
 
 const port = process.env.port || 8080;
 
