@@ -48,7 +48,7 @@ app.post('/setAppointment', function(req, res) {
    });
 });
 
-app.post('/appointments', function(req, res) {
+app.get('/appointments', function(req, res) {
   var uid = "-M64LHvSEaUhiw6hwg";
 if (uid.length != 18) {
   res.json({message: "Error: uid must be 18 characters long."});
