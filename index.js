@@ -64,6 +64,6 @@ if (uid.length != 18) {
 }
 });
 
-const port = process.env.port || 4200;
+const port = process.env.port || 8080;
 
 app.listen(port, () => console.log(`Doctors Portal : listening at http://localhost:${port}`));
